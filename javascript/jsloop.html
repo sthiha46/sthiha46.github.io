@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Loop</title>
+</head>
+<body>
+        <h1> JS Loop</h1>
+        <script>
+                // loop: 1: counter : initialize = 0,1,
+                //2: condition:
+                //3: increment operator:
+                for(var i=1; i<=10; i++)
+                document.write(i+": hello world<br>");
+
+                for(var j=10 ; j>0 ; j--)
+                document.write(j+ ": hello j <br>");
+
+                let a=10;
+                let b=20;
+                let c= a++ + 10;
+                let d= a + ++b ;
+                let e= ++a + --b ; // a ကို ၁ တိုးပါ b ကို ၁ လျော့ပါ ပြီးလျှင် ၂  ခုပေါင်းပါ
+                let f= a-- - b++ ; // aထဲကb ကိုနုတ်ပါ ပြီးမှ a ကို ၁ လျော့ b ကို ၁တိုးပါ
+                let flag=true;
+                if(!flag){
+                    alert (`hi`);
+                }
+
+                //ask user to enter number for 5 times:
+                //sum to get total numbers
+                // show result:
+                /*
+                var total=0;
+                let answer=parseInt(prompt("How many numbers? "));
+                for(var i=1; i<=answer ; i++){
+                    let number=parseInt(prompt("Enter a number!"));
+                    total += number ;
+                }
+                alert(`Total :`+ total);
+               
+               var sum=0;
+               let answer= parseInt(prompt("How Many numbers:"))
+                for(var i=1; i<=answer;i++ ){
+                    sum +=i;
+                }
+                alert ("The sum of 1 to "+answer+":"+sum);
+                 */
+
+                 //nested loop:
+
+                 for(var i=1 ; i<=5 ; i++){
+                    for(var j=1 ; j<=i ; j++){
+                        document.write(` * `);
+                    }
+                    document.write('<br>')
+                 }
+
+                 /*
+                    2 x 1= 2
+                    2 x 2= 4
+                    2 x 3= 6
+                 */
+                let answer=parseInt(prompt("Enter a number: "))
+                for(var j=2 ; j<=answer ; j++){
+                for(var i=1; i<=12 ; i++){
+                    let result=j * i;
+                    document.write(j + ' x '+i+' = '+result + '<br>')
+                 }
+                }
+        </script>
+</body>
+</html>

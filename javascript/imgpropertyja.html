@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Image Actions</title>
+</head>
+<body>
+        <img src="../images/logo.jpg" id="myimg" onmouseover="big()" onmouseout="normal()" width="200px" height="200px" >
+
+        <script>
+            function big(){
+               // console.log('hi')
+               let myimg = document.getElementById("myimg");
+               myimg.setAttribute('width','400px');
+               myimg.setAttribute('height','400px');
+            }
+
+            function normal(){
+                let myimg = document.getElementById("myimg");
+               myimg.setAttribute('width','200px');
+               myimg.setAttribute('height','200px');
+            }
+        </script>
+</body>
+</html>

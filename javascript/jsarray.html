@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array</title>
+</head>
+<body>
+        <h3>JS Array</h3>
+
+        <h4> Student registration</h4>
+        Name: <input type="text" id="name"> <br>
+        Age: <input type="number" id="age"> <br>
+        Cuty: <input type="text" id="city" > <br>
+        <button onclick="addStudent()">Register</button>
+
+        <h4>Student List</h4>
+        <table border="1px" cellpadding="10">
+            <thead> 
+                    <tr>
+                        <th>No.</th>
+                        <th>Name.</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+            </thead>
+            <tbody id="mydata">
+
+            </tbody>
+        </table>
+        <script>
+                let myStudentList=[];
+                function addStudent(){
+                    //get data from form:
+                let name=document.getElementById("name").value;
+                let age=document.getElementById("age").value;
+                let city=document.getElementById("city").value;
+                    // add to array
+                    let student={
+                        name : name ,
+                        age : age ,
+                        city : city
+                    }
+                    myStudentList.push(student);
+                    // show data
+                    //console.log(myStudentList);
+                    showData();
+                }
+
+                function showData(){
+                    let html=``;
+                    for(var i=0;i<myStudentList.length;i++){
+                        //console.log(studentList[i]);
+                        let student=myStudentList[i];
+                        // console.log(student.name,student.age,student.city);
+                        html +=` <tr>
+                            <td>${i+1} </td> <td>${student.name}</td> <td>${student.age}</td>
+                                <td>${student.city}</td>
+                            </tr> `;
+                    document.getElementById("mydata").innerHTML=html;
+
+                }
+            }
+                    let students=['mg mg', 'Aye Aye', 'Moe Moe', 'Ko Ko', 'Mi Mi'];
+                    console.log(students)
+                    console.log(students[0])
+                    console.log(students[1])
+                    let fruits=[];
+                    fruits.push("Banana");
+                    fruits.push("Apple");
+                    fruits.push("Mango");
+                    console.log(fruits)
+                    console.log( fruits.pop() )
+                    console.log(fruits)
+
+                    let greeting = "Hello Bootcampers!";
+                    console.log(greeting.length)
+                    console.log(greeting.indexOf('H'))
+                    console.log(greeting.charAt(0));
+                    let student1={
+                        name : 'Mg Mg' ,
+                        age : 23 ,
+                        city : 'Mandalay'
+                    } ;
+                    let student2={
+                        name: 'Aye Aye' ,
+                        age: 22,
+                        city: 'Yangon'
+                    }
+                    let student3={
+                        name: 'Ko Ko' ,
+                        age: 20,
+                        city: 'Monywa'
+                    }
+                    let studentList=[student1,student2,student3];
+                    studentList.push(student3);
+                    console.log(studentList.length);
+                    let html='';
+                    for(var i=0;i<studentList.length;i++){
+                        //console.log(studentList[i]);
+                        let student=studentList[i];
+                        // console.log(student.name,student.age,student.city);
+                        html +=` <tr>
+                                <td>${i+1} </td> <td>${student.name}</td> <td>${student.age}</td>
+                                <td>${student.city}</td>
+                            </tr>`;
+                    }
+                    document.getElementById("mydata").innerHTML=html;
+                    
+        </script>
+
+        
+</body>
+</html>
